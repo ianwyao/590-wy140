@@ -27,6 +27,7 @@ class Data:
     
     ##Visualize two plots, weight(age) and is_adult(weight) plots
     def visual(self,x,y,z):
+        plt.ion() 
         fig,ax = plt.subplots(1,2,figsize=(30,15))
         ax[0].plot(x,z,'bo')
         ax[1].plot(z,y,'go')
@@ -34,6 +35,7 @@ class Data:
         ax[0].set_ylabel('weight(lb)')
         ax[1].set_xlabel('weight(lb)')
         ax[1].set_ylabel('Adult = 1 Child = 0')
+        plt.show()
         
 ##Choosing a measure of success:
 ##Mean Square Error(MSE)
